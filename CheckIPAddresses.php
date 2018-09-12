@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Symfony\Component\HttpFoundation\IpUtils;
 
-class IPAddresses
+class CheckIPAddresses
 {
     /**
      * List of valid IPs.
@@ -14,7 +14,6 @@ class IPAddresses
      */
     protected $ips = [
         '127.0.0.1',
-        '188.102.29.159',
     ];
 
     /**
@@ -22,9 +21,7 @@ class IPAddresses
      *
      * @var array
      */
-    protected $ipRanges = [
-        '12.64.103.24',
-    ];
+    protected $ipRanges = [];
 
     /**
      * Handle an incoming request.
